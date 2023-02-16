@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hi :)</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-size: 5rem;
+        text-align: center;
+        background-color: white;
+        color: black;
+        transition: background-color 0.5s, color 0.5s;
+      }
+      
+      button {
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        margin: 1rem;
+      }
+      
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Hi there. Hope you're doing well.</p>
+      <button onclick="playSound()">Bye</button>
+      <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+      <button onclick="goToRickRoll()">Go back to what you were doing</button>
+    </div>
+    <script>
+      function playSound() {
+        var audio = new Audio('bye.mp3');
+        audio.play();
+      }
+      
+      function toggleDarkMode() {
+        var body = document.querySelector('body');
+        body.classList.toggle('dark-mode');
+      }
+      
+      function goToRickRoll() {
+        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+      }
+    </script>
+  </body>
+</html>
+
+
+
